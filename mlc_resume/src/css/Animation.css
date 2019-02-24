@@ -28,7 +28,7 @@
 */
 .ScrollDownContainer {
   position: absolute;
-  top: 25%;
+  top: 350px;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 24px;

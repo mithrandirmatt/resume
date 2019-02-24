@@ -2,9 +2,15 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 import '../css/Animation.css';
+import '../css/Buttons.css';
 import '../css/Fade.css';
 import '../css/Header.css';
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faBars)
 
 var createReactClass = require('create-react-class');
 
@@ -41,7 +47,7 @@ var ScrollDown = createReactClass( {
 export default class Header extends Component {
 
     componentWillMount () {
-        this.setState(  { leftContent: "Matthew\nCline's\nResume" } );
+        this.setState(  { leftContent: "Matthew Cline's Resume" } );
     }
 
     componentDidMount () {
@@ -54,11 +60,21 @@ export default class Header extends Component {
         }, 5000);
     }
 
+    menuOnClick () {
+        console.log("clicked");
+    }
+
     render() {
         return (
             <div className="Header fade-in">
                 <div id="HeaderLeftContent">{this.state.leftContent}</div>
-                <div id="HeaderRightContent"></div>
+                <div id="HeaderRightContent">
+                    <div className="HeaderMenuBtn" onClick={this.menuOnClick}></div>
+                    <div id="HeaderContact" className="HeaderMenuBtn"></div>
+                    <div id="HeaderResume"className="HeaderMenuBtn"></div>
+                    <div id="HeaderAbout"className="HeaderMenuBtn"></div>
+                    <FontAwesomeIcon id="hamburger" icon="bars" />
+                </div>
                 <div id="HeaderBackground" className="HeaderBackground"></div>
                 <div id="HeaderScrollDown"></div>
             </div>

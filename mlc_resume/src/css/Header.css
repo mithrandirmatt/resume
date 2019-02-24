@@ -33,6 +33,49 @@
     }
 }
 
+
+
+#hamburger {
+    position: absolute;
+    top: 117px;
+    right: 66px;
+    color: white;
+    pointer-events: none;
+    width: 70px;
+    height: 70px;
+    background-color: transparent;
+}
+
+#HeaderContact #HeaderResume #HeaderAbout {
+    opacity: 0;
+}
+
+.HeaderMenuBtn {
+    position: Absolute;
+    width: 100px;
+    right: 50px;
+    top: 100px;
+    transform: rotate(45deg);
+    background-color: black;
+    opacity: 0.1;
+    transition: .4s;
+    border:  2px solid white;
+}
+
+.HeaderMenuBtn:hover {
+
+    background: #9e0000;
+    color: white;
+    opacity: 1;
+    border:  2px solid black;
+}
+
+.HeaderMenuBtn:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
 .HeaderBackground {
   display: block;
   width: 100%;
