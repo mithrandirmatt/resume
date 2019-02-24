@@ -1,0 +1,112 @@
+
+
+
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes slideUp {
+  0%   { transform: translate(-50%, 0%) }
+  100% { transform: translate(-50%, -50%) }
+}
+
+@keyframes slideUp {
+    0%   { transform: translate(-50%, 0%) }
+    100% { transform: translate(-50%, -50%) }
+}
+
+.animationSlideUp {
+    -webkit-animation: slideUp 2s;
+    -moz-animation: slideUp 2s;
+    -o-animation: slideUp 2s;
+    -ms-animation: slideUp 2s;
+    animation: slideUp 2s;
+}
+
+
+
+/* Shout out to the following: https://codepen.io/xonic/pen/KWMaqe
+** Scroll Down Animation Repurposed from there for this project in react.
+*/
+.ScrollDownContainer {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+}
+
+.ScrollDownChevron {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: ScrollDownMove 3s ease-out infinite;
+}
+
+.ScrollDownChevron:first-child {
+  animation: ScrollDownMove 3s ease-out 1s infinite;
+}
+
+.ScrollDownChevron:nth-child(2) {
+  animation: ScrollDownMove 3s ease-out 2s infinite;
+}
+
+.ScrollDownChevron:before,
+.ScrollDownChevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #fff;
+}
+
+.ScrollDownChevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.ScrollDownChevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes ScrollDownMove {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+.ScrollDownText {
+  display: block;
+  margin-top: 75px;
+  margin-left: -69px;
+  text-align: center;
+  font-size: 1.5em;
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: .50;
+  animation: ScrollDownPulse 2s linear alternate infinite;
+}
+
+@keyframes ScrollDownPulse {
+  to {
+    opacity: 1;
+  }
+}
