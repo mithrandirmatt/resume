@@ -50,6 +50,25 @@
     opacity: 0;
 }
 
+@keyframes HeaderAboutKeyFrame {
+    0%  {
+            transform: translate3d( 100px, 50px, 0px) rotate(45deg);
+            opacity: 0;
+        }
+    100% {
+            transform: translate3d( 50px, 100px, 0px) rotate(45deg);
+            opacity: 1;
+        }
+}
+
+.HeaderAboutSlideOut {
+    -webkit-animation: HeaderAboutKeyFrame 1s;
+    -moz-animation: HeaderAboutKeyFrame 1s;
+    -o-animation: HeaderAboutKeyFrame 1s;
+    -ms-animation: HeaderAboutKeyFrame 1s;
+    animation: HeaderAboutKeyFrame 1s;
+}
+
 .HeaderMenuBtn {
     position: Absolute;
     width: 100px;
@@ -59,6 +78,7 @@
     background-color: black;
     opacity: 0.1;
     transition: .4s;
+    cursor: pointer;
     border:  2px solid white;
 }
 

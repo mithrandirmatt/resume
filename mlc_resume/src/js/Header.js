@@ -60,7 +60,7 @@ export default class Header extends Component {
         }, 5000);
     }
 
-    menuOnClick () {
+    handleClick  = e => {
         console.log("clicked");
     }
 
@@ -69,10 +69,10 @@ export default class Header extends Component {
             <div className="Header fade-in">
                 <div id="HeaderLeftContent">{this.state.leftContent}</div>
                 <div id="HeaderRightContent">
-                    <div className="HeaderMenuBtn" onClick={this.menuOnClick}></div>
+                    <button className="HeaderMenuBtn" onClick={this.handleClick}></button>
                     <div id="HeaderContact" className="HeaderMenuBtn"></div>
                     <div id="HeaderResume"className="HeaderMenuBtn"></div>
-                    <div id="HeaderAbout"className="HeaderMenuBtn"></div>
+                    <div id="HeaderAbout"className="HeaderMenuBtn HeaderAboutSlideOut"></div>
                     <FontAwesomeIcon id="hamburger" icon="bars" />
                 </div>
                 <div id="HeaderBackground" className="HeaderBackground"></div>
