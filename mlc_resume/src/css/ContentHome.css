@@ -1,0 +1,101 @@
+
+
+.ContentHomeFirstSectionCommon{
+    background-color: white;
+    height: 800px;
+    width: 100%;
+    padding-bottom: 200px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.ContentHomeCreatingContext{
+    position: absolute;
+    left: 2.5%;
+    bottom: 0px;
+    height: 28em;
+    max-height: 28em;
+    width: 30%;
+}
+
+.ContentHomeInnovatingContext{
+    position: absolute;
+    left: 67.5%;
+    bottom: 0px;
+    height: 28em;
+    width: 30%;
+}
+
+.ContentHomeCollaboratingContext{
+    position: absolute;
+    left: 35%;
+    bottom: 0px;
+    height: 28em;
+    width: 30%;
+}
+
+.ContentHomeCreatingContext, {
+
+}
+
+
+.ContentHomeCreatingContextBackground, .ContentHomeInnovatingContextBackground, .ContentHomeCollaboratingContextBackground {
+    z-index: 1;
+    background-size: cover;
+    opacity: 0.6;
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    height: 55%;
+    max-height: inherit;
+
+    border-bottom: 0px solid red;
+    transition: border-width 2s linear;
+    transition: top 2s;
+    transition: transform .5s; /* Animation */
+}
+
+
+
+.ContentHomeCreatingContext:hover .ContentHomeCreatingContextBackground, .ContentHomeInnovatingContext:hover .ContentHomeInnovatingContextBackground, .ContentHomeCollaboratingContext:hover .ContentHomeCollaboratingContextBackground {
+    border-bottom: 10px solid red;
+    opacity: 1;
+    z-index: 2;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.ContentHomeCreatingContextBackground {
+    background-image: url(../img/rhondak-native-florida-folk-artist-83553-unsplash.jpg);
+}
+
+.ContentHomeInnovatingContextBackground {
+    background-image: url(../img/andrea-leon-1274554-unsplash.jpg);
+}
+
+.ContentHomeCollaboratingContextBackground {
+    background-image: url(../img/marvin-meyer-571072-unsplash.jpg);
+}
+
+
+.ContentHomeCreatingContextText, .ContentHomeInnovatingContextLabel, .ContentHomeCollaboratingContextLabel {
+    width: 100%;
+    z-index: 2;
+}
+
+.ContentHomeCreatingContextLabel, .ContentHomeInnovatingContextLabel, .ContentHomeCollaboratingContextLabel {
+    position: absolute;
+    bottom: .3em;
+    text-align: center;
+    width: 100%;
+    opacity: 1 !important;
+    font-size: 4em;
+}
+
+.ContentHomeCreatingContextText, .ContentHomeInnovatingContextText, .ContentHomeCollaboratingContextText {
+
+    text-align: center;
+    opacity: 1 !important;
+    font-size: 3em;
+    color: red;
+}

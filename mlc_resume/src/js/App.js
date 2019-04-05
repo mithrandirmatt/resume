@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Body from './Body';
 import Header from './Header';
 import NavBar from './NavBar';
 import Log from './Log';
@@ -28,8 +29,6 @@ export default class App extends Component {
     }
 
     getPageState = (ps) => {
-        console.log(ps);
-
         this.setState( { pageState: ps })
     }
 
@@ -37,9 +36,9 @@ export default class App extends Component {
         return (
             <div id="App" className="App">
                 <Header getPageState={this.getPageState} id="AppHeader"></Header>
-                <div id="AppBody"></div>
-                <div id="AppNavBar"></div>
-                <NavBar pageState={this.state.pageState} id="AppFooter"></NavBar>
+                <Body pageState={this.state.pageState} id="AppBody"></Body>
+                <div id="AppFooter"></div>
+                <NavBar pageState={this.state.pageState} id="AppNavBar"></NavBar>
             </div>
         );
     }

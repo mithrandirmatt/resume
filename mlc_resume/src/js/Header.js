@@ -13,6 +13,7 @@ import { faInfo } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faAddressCard } from '@fortawesome/free-solid-svg-icons';
 
+
 library.add(faBars);
 library.add(faInfo);
 library.add(faEnvelope);
@@ -81,7 +82,6 @@ export default class Header extends Component {
     }
 
     handleClick  = e => {
-        console.log("clicked");
 
         this.setState({ menuSlideout: !this.state.menuSlideout });
 
@@ -105,7 +105,6 @@ export default class Header extends Component {
     }
 
     handlePageChange = (e) => {
-        console.log(e, e.target.id );
 
         var state = e.target.id;
         state = state.replace("Header", "");
@@ -124,14 +123,15 @@ export default class Header extends Component {
             <div className="Header fade-in">
                 <div id="HeaderLeftContent">{this.state.leftContent}</div>
                 <div id="HeaderRightContent">
-                    <div id="HeaderMenuBtn" className="HeaderMenuBtn" onClick={this.handleClick}></div>
-                    <div id="HeaderContact" className="HeaderMenuBtn" onClick={this.handlePageChange}>
+                    <div id="HeaderMenuBtn"  className="HeaderMenuBtn" onClick={this.handleClick}></div>
+
+                    <div id="HeaderContact" data-tip="Contact" className="HeaderMenuBtn" onClick={this.handlePageChange}>
                         <FontAwesomeIcon className="HeaderContactIcon" icon="envelope"></FontAwesomeIcon>
                     </div>
-                    <div id="HeaderResume"className="HeaderMenuBtn" onClick={this.handlePageChange}>
+                    <div id="HeaderResume" data-tip="Resume" className="HeaderMenuBtn" onClick={this.handlePageChange}>
                         <FontAwesomeIcon className="HeaderResumeIcon" icon="address-card"></FontAwesomeIcon>
                     </div>
-                    <div id="HeaderAbout"className="HeaderMenuBtn HeaderAboutSlideOut" onClick={this.handlePageChange}>
+                    <div id="HeaderAbout" data-tip="About" className="HeaderMenuBtn HeaderAboutSlideOut" onClick={this.handlePageChange}>
                         <FontAwesomeIcon className="HeaderAboutIcon"  icon="info"></FontAwesomeIcon>
                     </div>
                     <FontAwesomeIcon id="hamburger" icon="bars" />

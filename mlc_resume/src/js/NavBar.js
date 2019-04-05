@@ -21,7 +21,6 @@ export default class NavBar extends Component {
 
         let element;
         let elements;
-        console.log("something happened", this.props, prevProps, prevState );
 
         switch( this.props.pageState )
         {
@@ -45,7 +44,7 @@ export default class NavBar extends Component {
                 element.classList.add("NavBarIconSelected");
                 break;
 
-            default: Log.info("Error: Unexpected page state detected.", 'NavBar Component');
+            default: Log.info("Error: Unexpected page state detected:" + this.props.pageState, 'NavBar Component',  );
         }
 
         elements = [ "NavBarHomeIcon", "NavBarContactIcon", "NavBarResumeIcon", "NavBarAboutIcon" ];
@@ -57,9 +56,7 @@ export default class NavBar extends Component {
                 element = document.getElementById( elements[i] );
                 element.classList.remove("NavBarIconSelected");
             }
-            console.log( elements[i].indexOf( this.props.pageState ) );
         }
-
     }
 
     render() {
