@@ -14,10 +14,6 @@
 }
 
 .animationSlideUp {
-    -webkit-animation: slideUp 2s;
-    -moz-animation: slideUp 2s;
-    -o-animation: slideUp 2s;
-    -ms-animation: slideUp 2s;
     animation: slideUp 2s;
 }
 
@@ -109,4 +105,15 @@
   to {
     opacity: 1;
   }
+}
+
+
+@-webkit-keyframes scrollUp {
+  0%   { transform: translate(0%, 0%) }
+  100% { transform: translate(0%, -50%) }
+}
+
+.ScrollUpShow {
+    opacity: 1;
+    animation: scrollUp 2s;
 }
